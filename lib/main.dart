@@ -10,18 +10,7 @@ import 'package:instagram_clone/utils/colors.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  if (kIsWeb) {
-    await Firebase.initializeApp(
-        options: FirebaseOptions(
-            apiKey: "AIzaSyAIKnxvHRUjGCrqPzCX0M_Mb26ssUs_qu0",
-            authDomain: "instagram-4b805.firebaseapp.com",
-            projectId: "instagram-4b805",
-            storageBucket: "instagram-4b805.appspot.com",
-            messagingSenderId: "340113550903",
-            appId: "1:340113550903:web:d4986ed8bc4ec98d2e59b2"));
-  } else {
-    await Firebase.initializeApp();
-  }
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
